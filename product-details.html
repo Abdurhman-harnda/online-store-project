@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <ul>
+            <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li><a href="product.html"><i class="fas fa-box"></i> Product</a></li>
+        <li><a href="team.html"><i class="fas fa-users"></i> Team</a></li>
+        <li><a href="media.html"><i class="fas fa-photo-video"></i> Media</a></li>
+        <li><a href="services.html"><i class="fas fa-concierge-bell"></i> Services</a></li>
+        <li><a href="login.html" class="loginbtn"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+
+        </ul><br><br>
+    </header>
+    <main>
+    <section class="pros">
+    <div class="pro">
+        <img id="product-img"  alt=" product-name">
+        <h3 id="product-name">PlayStation 5 Pro </h3>
+        <p id="product-description">PlayStation 5 Slim Digital Edition Console (KSA version).</p>
+        <p id="product-price" class="pric">$629</p> 
+        <div><button onclick="alert('Adding to cart successfully!')" class="btn">Add to Cart</button></div>
+        
+    </div>
+</section>
+  
+    <script>
+        const products = {
+            arduino: {
+                name: "Arduino UNO",
+                img: "IMG/p4-rem.png",
+                description: "Arduino Uno is a microcontroller board based on the ATmega328P",
+                price: "$29.28"
+            },
+            ps5: {
+                name: "PlayStation 5 Pro",
+                img: "IMG/ps5.png",
+                description: "PlayStation 5 Slim Digital Edition Console (KSA version).",
+                price: "$629"
+            },
+            acer: {
+                name: "Acer Laptop",
+                img: "IMG/lap.png",
+                description: "Acer Aspire Lite AL15 Laptop with Intel Celeron N4500 Dual Core",
+                price: "$175"
+            },
+            sony: {
+                name: "Sony WH-1000XM5",
+                img: "IMG/wh-1000xm5b-7.avif",
+                description: "The Best Wireless Noise Canceling Headphones",
+                price: "$328"
+            }
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        const product = products[productId];
+
+        if (product) {
+            document.getElementById("product-name").textContent = product.name;
+            document.getElementById("product-img").src = product.img;
+            document.getElementById("product-img").alt = product.name;
+            document.getElementById("product-description").textContent = product.description;
+            document.getElementById("product-price").textContent = product.price;
+        } else {
+            document.getElementById("product-name").textContent = "Product not found";
+        }
+    </script>
+    </main>
+     <footer>
+        <p>&copy; 2025 Online Store - All rights reserved</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Home - Online Store</title>
+    <style>
+          .why-us {
+        background-color: rgba(0, 188, 212, 0.1);
+        padding: 40px 20px;
+        margin-top: 40px;
+        text-align: center;
+        color: #fff;
+      }
+
+      .why-us h2 {
+          font-size: 28px;
+          margin-bottom: 20px;
+          color: #00e5ff;
+      }
+
+      .why-us ul {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 15px;
+          padding: 0;
+          margin: 0;
+      }
+
+      .why-us li {
+          list-style-type: none;
+          background-color: rgba(255, 255, 255, 0.05);
+          padding: 12px 20px;
+          border-radius: 8px;
+          font-size: 18px;
+          color: #fff;
+          max-width: 500px;
+          width: 100%;
+          text-align: center;
+          transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+      .why-us li:hover {
+          background-color: rgba(0, 188, 212, 0.2);
+          transform: scale(1.03);
+      }
+    </style>  
+</head>
+<body>
+    <header class="navbar">
+        
+        <ul>
+          <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li><a href="product.html"><i class="fas fa-box"></i> Product</a></li>
+        <li><a href="team.html"><i class="fas fa-users"></i> Team</a></li>
+        <li><a href="media.html"><i class="fas fa-photo-video"></i> Media</a></li>
+        <li><a href="services.html"><i class="fas fa-concierge-bell"></i> Services</a></li>
+        <li><a href="login.html" class="loginbtn"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+        </ul>
+    </header>
+    <main>
+
+        <div class="logo-home">
+            <img src="IMG/mainlogo.png" alt="Logo">
+        </div>
+
+        <section class="intro">
+            <h2>Welcome to Our Online Store</h2>
+            <p>We provide the latest tech products at unbeatable prices.</p>
+          </section>
+          
+          <section class="pros">
+            <div class="pro">
+              <img src="IMG/p4-rem.png" alt="Product 1">
+              <h3>Bluetooth Headphones</h3>
+              <p>High-quality sound with stylish design</p>
+              <span class="pric">$26.40</span>
+              <div><button onclick="alert('Adding to cart successfully!')" class="btn">Add to Cart</button></div>
+            </div>
+          
+            <div class="pro">
+              <img src="IMG/wh-1000xm5b-7.avif" alt="Product 2">
+              <h3>Mechanical Keyboard</h3>
+              <p>Smooth and fast typing experience</p>
+              <span class="pric">$40.00</span>
+              <div><button onclick="alert('Adding to cart successfully!')" class="btn">Add to Cart</button></div>
+            </div>
+          </section>
+
+          <section class="why-us">
+            <h2>Why Shop With Us?</h2>
+            <ul>
+              <li>Excellent customer service</li>
+              <li>Fast delivery across the country</li>
+              <li>Warranty on all products</li>
+            </ul>
+          </section>
+
+          <section class="contact-home" style="padding: 30px;
+          text-align: center;
+          color: #fff;">
+            <h2>Get in Touch</h2>
+            <p>Have a question? Reach us via <a href="mailto:support@example.com">email</a> or through our <a href="contact.html">contact form</a>.</p>
+          </section>
+          
+          
+          
+    
+</main>
+    <footer>
+       <p>&copy; 2025 Online Store - All rights reserved</p>
+    </footer>
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Our Team</title>
+</head>
+<body>
+  <header class="navbar">
+    <ul>
+        <li><a href="home.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li><a href="product.html"><i class="fas fa-box"></i> Product</a></li>
+        <li><a href="team.html"><i class="fas fa-users"></i> Team</a></li>
+        <li><a href="media.html"><i class="fas fa-photo-video"></i> Media</a></li>
+        <li><a href="services.html"><i class="fas fa-concierge-bell"></i> Services</a></li>
+        <li><a href="login.html" class="loginbtn"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <section Sclass="intro">
+      <h2 >Meet Our Team</h2>
+      <div id="team-list" class="team-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Online Store - All rights reserved</p>
+  </footer>
+
+  
+  <script>
+    const teamMembers = [
+      "Abdulrhman Al-Harnda",
+      "Malek Al-johane",
+      "Rabea Ahmad",
+      "Malek Khalid"
+    ];
+  
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+  
+    const shuffledMembers = shuffle([...teamMembers]);
+    const list = document.getElementById("team-list");
+  
+    shuffledMembers.forEach(name => {
+      const card = document.createElement("div");
+      card.className = "team-card";
+      card.textContent = name;
+      list.appendChild(card);
+    });
+  </script>
+  
+</body>
+</html>
